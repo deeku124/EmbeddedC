@@ -1,22 +1,19 @@
 #include<stdio.h>
-#include"bitdisplay.h"
+#include"displaybits.h"
+void rotate(int num, int n)
+{
+int mask=(~(~0<<n))<<(32-n);
+int result=(num<<n)|((num&mask)>>(32-n));
+printf("%x\n",result);
+}
 
 int main()
 {
-int a=58585,numb,result1,result2,result;
-displaybits(a);
-printf("%x\n",a);
-printf("no.of positions you wanna rotate your number\n");
-scanf("%d",&numb);
-result1=(a>>numb);
-result2=(a<<(32-numb));
-displaybits(result1);
-displaybits(result2);
-printf("%x\n",result1);
-printf("%x\n",result2);
-result=result1|result2;
-displaybits(result);
-printf("%x\n",result);
+int num,n,result;
+printf("enter a hexadecimal number\n");
+scanf("%x",&num);
+printf("enter number of bits to rotate\n");
+scanf("%d",&n);
+rotate(num,n);
 return 0;
 }
-
