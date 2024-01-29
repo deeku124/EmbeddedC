@@ -15,7 +15,7 @@ for(i=0;i<31;i++)
   }
   else
   {
-  printf("enter a valid binary number\n");
+  break;
   }
 }
 printf("%d\n",num);
