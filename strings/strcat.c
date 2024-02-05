@@ -1,26 +1,23 @@
 #include<stdio.h>
 #include<string.h>
-char *str_cat(char str1[],char str2[])
+char *str_cat(char *str1,char *str2)
 {
-int i=0,j=0;
-while(str1[i]!='\0')
-i++;
-while(str1[i++]=str2[j++])
-;
+char *p=str1;
+while(*p!='\0')
+{
+p++;
+}
+while(*p++=*str2++);
 return str1;
 }
-
 int main()
 {
-char str1[10],str2[10];
-printf("enter first string\n");
+char str1[100],str2[100],*str;
+printf("enter a string\n");
 scanf("%s",str1);
-printf("enter second string\n");
+printf("enter a string\n");
 scanf("%s",str2);
-char *str3=str_cat(str1,str2);
-printf("%s\n",str3);
+str=str_cat(str1,str2);
+printf("concatenated string is %s\n",str);
 return 0;
 }
-
-
-
