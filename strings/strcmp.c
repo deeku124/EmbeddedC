@@ -13,12 +13,12 @@ return(*str1-*str2);
 }
 int main()
 {
-char *str1,*str2;
+char str1[100],str2[100];
 printf("enter first string\n");
-scanf("%s",&str1);
+scanf("%s",str1);
 printf("enter second string\n");
-scanf("%s",&str2);
-int result=str_cmp(&str1,&str2);
+scanf("%s",str2);
+int result=str_cmp(str1,str2);
 if(result==0)
 {
 printf("both strings are same\n");
