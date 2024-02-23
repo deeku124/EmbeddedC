@@ -1,4 +1,6 @@
 #include<stdio.h>
+int main()
+{
 char ch;
 int i,num=0;
 printf("enter a binary number\n");
