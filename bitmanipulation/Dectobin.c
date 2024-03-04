@@ -6,7 +6,7 @@ int rem,bin=0,a=1;
 while(num>0)
 {
 rem=num%2;
-bin=a*bin+rem;
+bin=bin+a*rem;
 num=num/2;
 a=a*10;
 }
