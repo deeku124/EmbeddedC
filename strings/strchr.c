@@ -16,7 +16,7 @@ i++;
 }
 int main()
 {
-char str[15];
+char str[15],ch;
 printf("enter string\n");
 scanf("%s",str);
 printf("enter character\n");
