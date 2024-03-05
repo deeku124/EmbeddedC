@@ -1,24 +1,15 @@
-#include<stdio.h>
-#include<string.h>
+// Online C compiler to run C program online
+#include <stdio.h>
 char *str_cpy(char *str1,char *str2)
-{ 
-while((*str1=*str2)!='\0')
 {
-str1++;
-str2++;
+    while(*str1++=*str2++);
+    return str1;
 }
-return str1;
-}
-
-
-int main()
-{
-char str1[10],str2[10];
-printf("enter first string\n");
-scanf("%s",str1);
-printf("enter second string\n");
-scanf("%s",str2);
-char *str3=str_cpy(str1,str2);
-printf("%s\n",str3);
-return 0;
+int main() {
+    char str1[10],str2[10];
+    printf("enter string\n");
+    scanf("%s",str2);
+    str_cpy(str1,str2);
+    printf("%s",str1);
+    return 0;
 }
