@@ -13,7 +13,7 @@ return ptr;
 }
 i++;
 }
-
+}
 int main()
 {
 char str[15];
