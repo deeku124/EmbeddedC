@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 char *str_chr(char *str,char ch)
 {
 int i=0;
